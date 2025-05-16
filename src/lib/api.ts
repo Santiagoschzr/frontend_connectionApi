@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000'; // Replace with your backend API URL
+const RAILWAY_API =  import.meta.env.VITE_RAILWAY_API
 
 const api = axios.create({
-    baseURL: API_BASE_URL,
+    baseURL: RAILWAY_API,
     withCredentials: false,
     headers: {
         'Content-Type': 'application/json',

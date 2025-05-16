@@ -49,6 +49,7 @@ const App = () => {
     const handleLogin = async (data: any) => {
         setIsLoading(true);
         setLoginError(undefined);
+        console.log(import.meta.env.RAILWAY_API)
         try {
             const response = await api.post('/login', data); // Use the correct API endpoint
             const { token, user } = response.data;
